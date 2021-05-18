@@ -5,7 +5,7 @@ import numpy as np
 from random import choice as c
 import random
 
-df = pd.read_excel('100_SAMPLES.csv')
+df = pd.read_csv('100_SAMPLES.csv')
 
 # convert text column to a list of 100 strings
 samples = df.text.tolist()
