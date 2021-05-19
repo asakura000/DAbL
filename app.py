@@ -69,7 +69,7 @@ def main():
             # The second elemnt in predicted probas is % not abusive
             percent_notAbusive = predicted_proba[1]
 
-            return flask.render_template('index.html', 
+            return flask.render_template('index.html',
                 input_text=user_input_text,
                 result=prediction,
                 percent_abusive=round(percent_abusive, 4),

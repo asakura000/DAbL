@@ -18,7 +18,7 @@
 		}
 
 		button:hover {
-			background-color: gray;
+			background-color: skyblue;
 		}
 
 		h1,
@@ -86,7 +86,7 @@
 
 		.left {
 			flex: 0 0 600px;
-			background-color: #05ABF8;
+			background-color: gray;
       		display: flex;
       		flex-flow: column wrap;
 		}
@@ -98,7 +98,7 @@
 
 		.middle {
 			flex: 1 0 auto;
-			background-color: skyblue;
+			background-color: black;
 		    display: flex;
 		    flex-flow: column wrap;
 		    align-items: center;
@@ -106,7 +106,7 @@
 
 		.right {
 			flex: 0 0 600px;
-			background-color: #05ABF8;
+			background-color: gray;
       		display: flex;
       		flex-flow: column wrap;
       		align-items: center;
@@ -177,7 +177,7 @@
 			max-width: 500px;
 			font-family: 'Roboto', sans-serif;
 			font-size: 64px;
-			color: red;
+			color: yellow;
 			padding-bottom: 50px;
 		}
 
@@ -219,7 +219,7 @@
 			left: 0;
 			width: inherit;
 			height: 100%;
-			background-color: red;
+			background-color: green;
 			transform-origin: center top;
 			transform: rotate(0.25turn);
 			transition: transform 0.2s ease-out;
@@ -240,7 +240,7 @@
 		.guage__cover1{
 			width: 75%;
 			height: 150%;
-			background-color: black;
+			background-color: black !important;
 			border-radius: 50%;
 			position: absolute;
 			top: 25%;
@@ -258,7 +258,7 @@
 		.guage__cover2{
 			width: 75%;
 			height: 150%;
-			background-color: black;
+			background-color: black !important;
 			border-radius: 50%;
 			position: absolute;
 			top: 25%;
@@ -281,6 +281,13 @@
 			height: 600px;
 		}
 
+		.headerText {
+			padding-left: 200px;
+			padding-top: 10px;
+			color: black;
+			font-size: 50px;
+		}
+
 		#box{
 			display: flex;
 			background-color: white;
@@ -288,13 +295,6 @@
 			padding-left: 50px;
 			height: 100px;
 			width: 200px;
-		}
-
-		#headerText {
-			padding-left: 200px;
-			padding-top: 10px;
-			color: #05ABF8;
-			font-size: 50px;
 		}
 
 		#textDisplay{
@@ -338,7 +338,7 @@
   	<!--- Header --->
 	<section class="headerContainer">
 		<img id="photo" src="{{url_for('static', filename='bluebird.png')}}" alt="bird">
-		<h2 id="headerText">Detecting Abusive Language (DAbL)</h2>
+		<h2 class="headerText">Detecting Abusive Language (DAbL)</h2>
 	</section>
 
 
