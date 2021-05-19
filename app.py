@@ -17,6 +17,7 @@ path_to_text_classifier = 'models/text-classifier_me.pkl'
 # get the list of 100 text strings from another .py file
 list_of_sample_texts = getSampleText.samples
 
+# load the pickle files
 with open(path_to_vectorizer, 'rb') as f:
     vectorizer = pickle.load(f)
 
@@ -77,7 +78,7 @@ def main():
         # Option 2: user chooses a randomly selected text
 
         elif flask.request.form.get('random'):
-            # randomly choose 1 text from a static ist of 100
+            # randomly choose 1 text from a static list of 100
             random_text = c(list_of_sample_texts)
 
             X = vectorizer.transform([random_text])

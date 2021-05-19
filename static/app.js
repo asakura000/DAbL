@@ -1,3 +1,5 @@
+// this code not actually linked to html, but its twin exists within the index.html file
+
 const guageElement = document.querySelector(".guage");
 
 function setGuageValue(guage, value){

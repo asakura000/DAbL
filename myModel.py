@@ -19,7 +19,8 @@ df = df[df['model_wrong'] == False]
 
 cond = df['label'] == 'hate'
 
-# lowercase all words:
+# function to lowercase all words:
+
 def make_lower(a_string):
     return a_string.lower()
 
@@ -27,7 +28,7 @@ def make_lower(a_string):
 
 df['new_label'] = np.where(cond, 'abusive', 'not abusive')
 
-# lower case only, leave punc in, don't stem words
+# lower case text column only, leave punc in, don't stem words
 
 df['text_clean'] = df['text'].apply(make_lower)
 
@@ -37,7 +38,7 @@ X = df['text_clean'].values
 
 y = df['new_label'].values
 
-# vectorize
+# vectorize 
 
 vectorizer = TfidfVectorizer(ngram_range=(1, 2))
 X = vectorizer.fit_transform(X)

@@ -1,4 +1,4 @@
-# script to access sample of 100 texts from excel spreadsheet
+# script to access sample of 100 texts from csv file
 
 import pandas as pd
 import numpy as np
@@ -10,12 +10,13 @@ df = pd.read_csv('100_SAMPLES.csv')
 # convert text column to a list of 100 strings
 samples = df.text.tolist()
 
-# choose 1 at random
+# choose 1 at random 
 sampleOne = c(samples)
 
-# choose 10 at random - for dropdown menu
+# choose 10 at random - for dropdown menu --- used for testing, not in actual app
 sampleThree = random.sample(samples, 3)
 
+# creating category-specific lists for the dropdown menu section of the app
 miscellaneous = df['category'] == 'miscellaneous'
 miscellaneous_list = df[miscellaneous].text.tolist()
 
