@@ -139,6 +139,13 @@
 
 		}
 
+		.modelPredictedText {
+			margin-top: 20px;
+		}
+
+		.clickToGen {
+			margin-top: 20px;
+		}
 
 		.result_text {
 			font-family: 'Roboto', sans-serif;
@@ -233,7 +240,7 @@
 		.guage__cover1{
 			width: 75%;
 			height: 150%;
-			background-color: skyblue;
+			background-color: black;
 			border-radius: 50%;
 			position: absolute;
 			top: 25%;
@@ -251,7 +258,7 @@
 		.guage__cover2{
 			width: 75%;
 			height: 150%;
-			background-color: skyblue;
+			background-color: black;
 			border-radius: 50%;
 			position: absolute;
 			top: 25%;
@@ -357,7 +364,7 @@
 		<!--- Col #2: Output Display --->
     	<section class="middle">
 			<div>
-				<h3> Model Predicted:  </h3>
+				<h3 class="modelPredictedText"> Model Predicted:  </h3>
 				{% if result %}
 					<h4 class="result_text">  {{ result }}  </h4>
 	    		{% endif %}
@@ -393,7 +400,7 @@
 
 		<section class="right">
 			
-			<h3>Click to Generate a Randomly Selected Sample Text<h3/>
+			<h3 class="clickToGen">Click to Generate a Randomly Selected Sample Text<h3/>
 
     		<form method ="POST" action="{{ url_for('main') }}">
   				<button type="submit" id="randomButton" name="random" value="random"> Random </button>
