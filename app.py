@@ -142,6 +142,8 @@ def main():
         # evaluate the selected text from the dropdown menu
         elif flask.request.form.get('evaluate'):
  
+            dropdownMenu = dropdownMenu
+
             # gets the current value from the dropdown menu
                 
             selected = flask.request.form.get('dropdownMenu')
