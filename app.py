@@ -35,13 +35,14 @@ def main():
     politics = getSampleText.politics_list
     immigration = getSampleText.immigration_list
 
+    global dropdownMenu 
+
     if flask.request.method == 'GET':
         # Just render the initial form, to get input
         return(flask.render_template('index.html'))
 
     if flask.request.method == 'POST':
 
-        global dropdownMenu 
         # Option 1: user chooses to enter their own text
 
         if flask.request.form.get('user_input_text'):
