@@ -41,6 +41,7 @@ def main():
 
     if flask.request.method == 'POST':
 
+        global dropdownMenu 
         # Option 1: user chooses to enter their own text
 
         if flask.request.form.get('user_input_text'):
@@ -98,8 +99,6 @@ def main():
         # Option 3: Generate dropdown menu
         elif flask.request.form.get('mixed'):
            
-           global dropdownMenu 
-
            dropdownMenu = random.sample(list_of_sample_texts, 10)
            return flask.render_template('index.html', 
                 dropdownMenu=dropdownMenu)
@@ -142,7 +141,7 @@ def main():
 
         # evaluate the selected text from the dropdown menu
         elif flask.request.form.get('evaluate'):
-             
+ 
             # gets the current value from the dropdown menu
                 
             selected = flask.request.form.get('dropdownMenu')
